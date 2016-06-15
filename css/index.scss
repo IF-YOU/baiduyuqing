@@ -172,9 +172,7 @@ $images:bg1,bg2,bg3,bg4;
 }
 /*diyiping*/
 #fullpage .top{
-	.bg-cloud-1.active{
-		-webkit-animation: cloudmove 100s linear infinite;
-	}
+	
 	.bg-cloud-1{
 		position: absolute;
 		top: 0;
@@ -182,12 +180,13 @@ $images:bg1,bg2,bg3,bg4;
 		width: 100%;
 		height: 1000px;
 		background: url(../image/cloud1.png) repeat;
+		animation: cloudmove 15s linear infinite;
 	}
 }
 #fullpage .middle{
-	.bg-cloud-2.active{
-		-webkit-animation: cloudmove 280s linear infinite;
-	}
+	/*.active.bg-cloud-2{
+		
+	}*/
 	.bg-cloud-2{
 		position: absolute;
 		top: -200px;
@@ -195,12 +194,11 @@ $images:bg1,bg2,bg3,bg4;
 		width: 100%;
 		height: 400px;
 		background: url(../image/cloud2.png) repeat;
+		animation: cloudmove 10s linear infinite;
 	}
 }
 #fullpage .bottom{
-	.bg-cloud-3.active{
-		-webkit-animation: cloudmove 600s linear infinite;
-	}
+	
 	.bg-cloud-3{
 		position: absolute;
 		bottom: 0;
@@ -208,8 +206,21 @@ $images:bg1,bg2,bg3,bg4;
 		width: 100%;
 		height: 400px;
 		background: url(../image/cloud3.png) repeat;
+		animation: cloudmove 15s linear infinite;
 	}
 }
+
+@keyframes cloudmove{
+	0%{
+		transform:translateX(0);
+	}
+	100%{
+		transform:translateX(-300px);
+	}
+}
+
+
+
 #fullpage .follow-head .center{
 	.obj-hill-1{
 		width: 265px;
